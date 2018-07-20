@@ -1,0 +1,58 @@
+\documentclass{beamer}
+
+\title{AEP vs. Polar Code}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Ideas}
+\begin{itemize}
+\item Use AEP/entropy rate to explain channel polarization
+
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Channel Polarization}
+\begin{itemize}
+\item Two inputs:
+\begin{align*}
+I(U_1,U_2;Y_1,Y_2)
+  &= I(U_1;Y_1,Y_2) + I(U_2;Y_1,Y_2|U_1) \\
+  &= I(U_1;Y_1,Y_2) + \left( I(U_2;Y_1,Y_2,U_1) - I(U_2;U_1) \right) \\
+  &= \color{green}{I(U_1;Y_1,Y_2)} + \color{blue}{I(U_2;Y_1,Y_2,U_1)} \\
+  &= \color{green}{I(W^-)} + \color{blue}{I(W^+)}
+\end{align*}
+
+\item Using the chain rule:
+\begin{align*}
+I(U_1^n;Y_1^n)
+  &= \sum_{i=1}^n I(U_i;Y_1^n|U_1^{i-1}) \\
+  &= \sum_{i=1}^n \left[ I(U_i;Y_1^n,U_1^{i-1}) - I(U_i;U_1^{i-1}) \right] \\
+  &= \sum_{i=1}^n I(U_i;Y_1^n,U_1^{i-1})
+\end{align*}
+
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
