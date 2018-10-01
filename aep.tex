@@ -50,6 +50,38 @@ I(U_1^n;Y_1^n)
 \end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Channel Polarization}
+\begin{itemize}
+\item Chain rule \& $U_i$ are independent
+\begin{align*}
+I(U_1^n;Y_1^n)
+  &= \sum_{i=1}^n I(U_i;Y_1^n,U_1^{i-1}) \\
+  &= \sum_{i=1}^n I(U_i;Y_1^n)
+\end{align*}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Note}
+\begin{itemize}
+\item If $X$ and $Z$ are independent, 
+	$I(X;Y,Z) \overset{?}{=} I(X;Y)$
+\begin{align*}
+I(X;Y,Z) &= H(X,Y,Z) - H(X|Y,Z) \\
+I(X;Y)   &= H(X,Y)   - H(X|Y)
+\end{align*}
+but $H(X,Y,Z)\geq H(X,Y)$ and $H(X|Y,Z)\leq H(X|Y)$, the only way
+that $I(X;Y,Z)=I(X;Y)$
+\end{itemize}
+
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
